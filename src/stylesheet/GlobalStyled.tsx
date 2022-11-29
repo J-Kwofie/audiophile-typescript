@@ -1,4 +1,4 @@
-import { createGlobalStyle} from 'styled-components'
+import  { createGlobalStyle} from 'styled-components'
 
 export const GlobalStyled = createGlobalStyle`
   *{
@@ -16,6 +16,16 @@ export const GlobalStyled = createGlobalStyle`
   };
   li {
     list-style: none;
-  };
+  }
+
+  @media (min-width: 1144px) {
+    .navbar-wrapper{
+      width: 100%;
+      padding: 0 10%;
+      background:#000;
+
+    }
+    
+  }
  
 `

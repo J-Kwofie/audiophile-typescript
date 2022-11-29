@@ -19,7 +19,7 @@ export const NavbarStyled = styled.header<displayNavProp>`
     flex-direction: column;
     background-color: ${(props) => props.theme.color2};
     gap:30px;
-    padding: 10px 3%;
+    padding: 20px 3%;
  }
   a{
     color: ${(props) => props.theme.color4};
@@ -32,4 +32,35 @@ export const NavbarStyled = styled.header<displayNavProp>`
  .logo{
     justify-self: center;
  }
+ nav a.active{
+    color: ${(props) => props.theme.color1};
+ };
+  @media (min-width: 776px) {
+    .logo{
+        justify-self: start;
+        margin-left: 60px;
+    }  
+    
+  }
+
+  @media (min-width: 1144px) {
+    .humburger{
+        display: none;
+    }
+    .logo{
+        order:-1;
+        margin-left: 0;
+    }
+    nav{
+        justify-self: center;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        gap:3rem;
+        position: unset;
+        padding: 0;
+    }; 
+    
+  }
 ` 
