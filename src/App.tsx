@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar  from './components/Navbar';
+import {GlobalStyled} from './stylesheet/GlobalStyled'
+import {ThemeProvider } from 'styled-components'
+const theme = {
+  color1:"#D87D4A",
+  color2:"#000000",
+  color3:"#F1F1F1",
+  color4:"#FFFFFF",
+  hoverColor1:"#fbaf85",
+  hoverColor2:"#000000",
+  
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ThemeProvider theme={theme}>
+        <div className="App">
+      <GlobalStyled />
+      <Navbar /> 
     </div>
+    </ThemeProvider>
   );
 }
 
