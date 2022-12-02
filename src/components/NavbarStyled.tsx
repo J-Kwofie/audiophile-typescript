@@ -8,7 +8,7 @@ export const NavbarStyled = styled.header<displayNavProp>`
     border-bottom:1px solid rgba(255,255,255,0.1);
     height: 68px;
     padding: 10px 3%;
-    background:${(props) => props.theme.color2};
+    background:${(props) => props.theme.color5};
 
  nav ul{
     width:100%;
@@ -17,9 +17,10 @@ export const NavbarStyled = styled.header<displayNavProp>`
     top: 68px;
     left: 0;
     flex-direction: column;
-    background-color: ${(props) => props.theme.color2};
+    background-color: ${(props) => props.theme.color5};
     gap:30px;
     padding: 20px 3%;
+    z-index: 2;
  }
   a{
     color: ${(props) => props.theme.color4};
@@ -35,6 +36,16 @@ export const NavbarStyled = styled.header<displayNavProp>`
  nav a.active{
     color: ${(props) => props.theme.color1};
  };
+ .cart-container{
+  display:flex;
+  flex-direction: column;
+  color:#FFFF;
+  align-items: center;
+ }
+ .cart-container span{
+  margin-bottom: -5px;
+
+}
   @media (min-width: 776px) {
     .logo{
         justify-self: start;
@@ -61,6 +72,8 @@ export const NavbarStyled = styled.header<displayNavProp>`
         position: unset;
         padding: 0;
     }; 
-    
+    .cartimage{
+      z-index:2;
+    }
   }
 ` 
